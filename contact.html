@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Prantik Nath</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0b092a;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: linear-gradient(to right, #3104e4, #6500c9);
+            padding: 20px 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #f101b5;
+        }
+
+        /* Main content */
+        main {
+            flex: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            color: #01c1f1;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .page-title p {
+            color: #c5c3e8;
+            line-height: 1.7;
+        }
+
+        /* Contact layout */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 25px;
+        }
+
+        /* Contact information card */
+        .contact-info,
+        .contact-form {
+            padding: 30px;
+            background-color: #15123d;
+            border-radius: 15px;
+            line-height: 1.8;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .contact-info {
+            border: 2px solid #01c1f1;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(1, 193, 241, 0.3);
+        }
+
+        .contact-form {
+            border: 2px solid #ed01f1;
+        }
+
+        .contact-form:hover {
+            box-shadow: 0 0 20px rgba(237, 1, 241, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            color: #01c1f1;
+        }
+
+        .contact-form h2 {
+            color: #ed01f1;
+        }
+
+        .info-item {
+            margin-bottom: 22px;
+        }
+
+        .info-item h3 {
+            color: #01c1f1;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .info-item p,
+        .info-item a {
+            color: #c5c3e8;
+            overflow-wrap: anywhere;
+        }
+
+        .info-item a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-item a:hover {
+            color: #f101b5;
+        }
+
+        /* Form fields */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #c5c3e8;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #514b83;
+            border-radius: 8px;
+            background-color: #0b092a;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #01c1f1;
+            box-shadow: 0 0 8px rgba(1, 193, 241, 0.25);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Submit button */
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #3104e4, #ed01f1);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(237, 1, 241, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #15123d;
+            color: #c5c3e8;
+            border-top: 1px solid #3104e4;
+        }
+
+        /* Responsive design */
+        @media (max-width: 700px) {
+            nav ul {
+                gap: 18px;
+            }
+
+            nav ul li a {
+                font-size: 15px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 30px;
+            }
+
+            main {
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-title">
+            <h1>Get In Touch</h1>
+            <p>
+                Have a question, an idea, or a project in mind?
+                Feel free to reach out!
+            </p>
+        </div>
+
+        <div class="contact-container">
+
+            <!-- Contact information -->
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p>
+                        <a href="mailto:your-email@example.com">
+                            prantik_ug_26@cse.nits.ac.in
+                        </a>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h3>💻 GitHub</h3>
+                    <p>
+                        <a href="https://github.com/prantik-nath-1902"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visit my GitHub
+                        </a>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h3>🌐 LinkedIn</h3>
+                    <p>
+                        <a href="https://www.linkedin.com/in/prantik-nath-9901133bb/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Connect with me
+                        </a>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📍 Location</h3>
+                    <p>India</p>
+                </div>
+            </section>
+
+            <!-- Contact form -->
+            <section class="contact-form">
+                <h2>Send Me a Message</h2>
+
+                <form action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter the subject"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prantik Nath. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0b092a;
+    color: white;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+}
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    background-color: #3104e4;
+    padding: 18px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    gap: 35px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f101b5;
+}
+#personallife,
+#web {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    background-color: #15123d;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+#personallife {
+    font-family: 'Arial';
+    background-size: cover;
+    color: white;
+    border: solid 2px #01c1f1;
+    border-radius: 10px;
+    margin-bottom:25 px;
+}
+#personallife:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to right, #15123d, #10394b);
+    box-shadow: 0 0 20px rgba(1, 193, 241, 0.3);
+    ma
+    
+}
+#personallife h2 {
+    color: #ed01f1;
+    margin-bottom: 12px;
+
+}
+#personallife h1 {
+    color: #28b8e4;
+    margin-bottom: 12px;
+   
+
+}
+#web  {
+    font-family: 'Arial';
+    background-size: cover;
+    color: white;
+    border: solid 2px #d02626;
+    border-radius: 10px;
+    margin-bottom:25 px;
+}
+#web:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to right, #15123d, #10394b);
+    box-shadow: 0 0 20px rgba(1, 193, 241, 0.3);
+    
+}
+#web h2 {
+    color: #d02626;
+    margin-bottom: 12px;
+}
+footer {
+    text-align: left;
+    padding: 20px;
+    background-color: #15123d;
+    color: #c5c3e8;
+    border-top: 1px solid #3104e4;
+}
+
+#personallife {
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 2px solid #01c1f1;
+    border-radius: 15px;
+    background-color: #15123d;
+    line-height: 1.8;
+    overflow: hidden;
+}
+
+#personallife img {
+    float: right;
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #01c1f1;
+    margin: 0 0 15px 20px;
+    max-width: 100%;
+    padding: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li> <a href="skills.html">Skills</a></li>
+            <li> <a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        <section id="personallife">
+            <h1> About Me </h1> <img  src="Passport Photo.jpeg" alt="Prantik Nath"   >
+            <h2> Prantik Nath</h2>
+            
+            <p> I am a passionate web developer with experience in creating responsive and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript, and I enjoy solving problems and creating efficient, scalable solutions.</p>
+        </section>
+        <section id="web">
+            <h2> Web Development </h2>
+            <p> I have experience in web development, including front-end and back-end development. I am proficient in HTML, CSS, JavaScript, and various frameworks and libraries. I enjoy creating visually appealing and user-friendly websites that provide a seamless user experience.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Prantik Nath. All rights reserved.</p> 
+    </footer>
+</body>
+</html>

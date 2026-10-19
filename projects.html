@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0b092a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: linear-gradient(to right, #3104e4, #6500c9);
+            padding: 20px 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f101b5;
+        }
+
+/* Project preview image */
+.project-preview {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Keep image inside the card */
+.preview-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image hover effect */
+.preview-link:hover .project-preview {
+    transform: scale(1.05);
+}
+
+/* Project description */
+.skill-card p {
+    color: #d5d3ed;
+    margin-bottom: 15px;
+}
+
+/* Project links */
+.skill-card a {
+    color: aliceblue;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.skill-card a:hover {
+    color: #01c1f1;
+}
+
+        /* Main content */
+        main {
+            flex: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Page heading */
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            color: #01c1f1;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .page-title p {
+            color: #c5c3e8;
+            line-height: 1.7;
+        }
+
+        /* Projects grid */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        /* Common skill card styling */
+        .skill-card {
+            padding: 25px;
+            border-radius: 15px;
+            background-color: #15123d;
+            line-height: 1.8;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease,
+                        background 0.3s ease;
+        }
+
+        .skill-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #d5d3ed;
+        }
+
+        /* Cyan cards */
+        .cyan {
+            border: 2px solid #01c1f1;
+        }
+
+        .cyan h2 {
+            color: #01c1f1;
+        }
+
+        .cyan:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(to right, #15123d, #10394b);
+            box-shadow: 0 0 20px rgba(1, 193, 241, 0.3);
+        }
+
+        /* Pink cards */
+        .pink {
+            border: 2px solid #ed01f1;
+        }
+
+        .pink h2 {
+            color: #ed01f1;
+        }
+
+        .pink:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(to right, #15123d, #351044);
+            box-shadow: 0 0 20px rgba(237, 1, 241, 0.3);
+        }
+
+       .skill-card a{
+        font-style: italic;
+        color:aliceblue;
+       }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 18px;
+            }
+
+            nav ul li a {
+                font-size: 15px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 30px;
+            }
+
+            main {
+                width: 92%;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-title">
+            <h1>My Projects</h1>
+            <p>
+                Here are some of the projects I have worked on
+                as a Computer Science and Engineering student.
+            </p>
+        </div>
+
+        
+<div class="projects-container">
+
+    <!-- Project 1 -->
+    <section class="skill-card cyan">
+
+        <a href="https://cerulean-rabanadas-0f6a3e.netlify.app/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-link">
+
+            <img src="hynatech.png"
+                 alt="HyenaTech website preview"
+                 class="project-preview">
+
+        </a>
+
+        <h2>HyenaTech | Gaming & Technology</h2>
+
+        <p>
+            A website about gaming and technology,
+            created using HTML and CSS.
+        </p>
+
+        <a href="https://cerulean-rabanadas-0f6a3e.netlify.app/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Visit Website ↗
+        </a>
+
+    </section>
+
+    <!-- Project 2 -->
+    <section class="skill-card pink">
+
+        <a href="index.html" class="preview-link">
+
+            <img src="images/portfolio.png"
+                 alt="Personal portfolio website preview"
+                 class="project-preview">
+
+        </a>
+
+        <h2>Portfolio Website</h2>
+
+        <p>
+            My personal portfolio showcasing my skills,
+            projects, and contact information.
+        </p>
+
+        <a href="index.html">View Portfolio ↗</a>
+
+    </section>
+
+</div>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prantik Nath. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

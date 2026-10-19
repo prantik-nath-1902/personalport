@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0b092a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: linear-gradient(to right, #3104e4, #6500c9);
+            padding: 20px 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f101b5;
+        }
+
+        /* Main content */
+        main {
+            flex: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Page heading */
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            color: #01c1f1;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .page-title p {
+            color: #c5c3e8;
+            line-height: 1.7;
+        }
+
+        /* Skills grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Common skill card styling */
+        .skill-card {
+            padding: 25px;
+            border-radius: 15px;
+            background-color: #15123d;
+            line-height: 1.8;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease,
+                        background 0.3s ease;
+        }
+
+        .skill-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #d5d3ed;
+        }
+
+        /* Cyan cards */
+        .cyan {
+            border: 2px solid #01c1f1;
+        }
+
+        .cyan h2 {
+            color: #01c1f1;
+        }
+
+        .cyan:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(to right, #15123d, #10394b);
+            box-shadow: 0 0 20px rgba(1, 193, 241, 0.3);
+        }
+
+        /* Pink cards */
+        .pink {
+            border: 2px solid #ed01f1;
+        }
+
+        .pink h2 {
+            color: #ed01f1;
+        }
+
+        .pink:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(to right, #15123d, #351044);
+            box-shadow: 0 0 20px rgba(237, 1, 241, 0.3);
+        }
+
+        /* Skill tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tags span {
+            padding: 6px 12px;
+            border-radius: 20px;
+            background-color: #252052;
+            border: 1px solid #514b89;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #15123d;
+            color: #c5c3e8;
+            border-top: 1px solid #3104e4;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 18px;
+            }
+
+            nav ul li a {
+                font-size: 15px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 30px;
+            }
+
+            main {
+                width: 92%;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-title">
+            <h1>My Skills</h1>
+            <p>
+                Here are the technical skills I am learning and developing
+                as a Computer Science and Engineering student.
+            </p>
+        </div>
+
+        <div class="skills-container">
+
+            <section class="skill-card cyan">
+                <h2>C Programming</h2>
+                <p>
+                    I am developing my programming and problem-solving
+                    skills using C. I practise writing programs and
+                    understanding fundamental programming concepts.
+                </p>
+                <div class="tags">
+                    <span>Variables</span>
+                    <span>Loops</span>
+                    <span>Functions</span>
+                    <span>Arrays</span>
+                </div>
+            </section>
+
+            <section class="skill-card pink">
+                <h2>HTML</h2>
+                <p>
+                    I use HTML to structure webpages and create
+                    well-organised content with semantic elements.
+                </p>
+                <div class="tags">
+                    <span>Forms</span>
+                    <span>Semantic HTML</span>
+                    <span>Links</span>
+                    <span>Tables</span>
+                </div>
+            </section>
+
+            <section class="skill-card pink">
+                <h2>CSS</h2>
+                <p>
+                    I use CSS to style webpages, improve layouts,
+                    add animations, and create responsive designs.
+                </p>
+                <div class="tags">
+                    <span>Flexbox</span>
+                    <span>Grid</span>
+                    <span>Transitions</span>
+                    <span>Responsive Design</span>
+                </div>
+            </section>
+
+            <section class="skill-card cyan">
+                <h2>JavaScript</h2>
+                <p>
+                    I am learning JavaScript to add interactivity
+                    and dynamic behaviour to websites.
+                </p>
+                <div class="tags">
+                    <span>Variables</span>
+                    <span>Functions</span>
+                    <span>DOM</span>
+                    <span>Events</span>
+                </div>
+            </section>
+
+            <section class="skill-card cyan">
+                <h2>Web Development</h2>
+                <p>
+                    I enjoy building webpages by combining HTML,
+                    CSS, and JavaScript to create attractive
+                    and user-friendly websites.
+                </p>
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>UI Design</span>
+                    <span>Navigation</span>
+                </div>
+            </section>
+
+            <section class="skill-card pink">
+                <h2>Problem Solving</h2>
+                <p>
+                    I practise breaking problems into smaller steps,
+                    developing logical solutions, and improving
+                    my programming fundamentals.
+                </p>
+                <div class="tags">
+                    <span>Logical Thinking</span>
+                    <span>Algorithms</span>
+                    <span>Debugging</span>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prantik Nath. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
